@@ -1,0 +1,40 @@
+# SCF input for VASP
+# Note that VASP uses the FIRST occurence of a keyword
+# Extra input added by hand
+NPAR=8
+MAGMOM=25*0 6*4 6*-4
+# End of extra input
+
+SYSTEM = Mn12 O25  (P1) ~ CONTCAR (VASP)
+
+    PREC = Normal
+   ENCUT = 367.693
+  IBRION = 2
+     NSW = 100
+    ISIF = 2
+  NELMIN = 2
+   EDIFF = 1.0e-05
+  EDIFFG = -0.02
+ VOSKOWN = 1
+  NBLOCK = 1
+    NELM = 60
+    ALGO = Normal (blocked Davidson)
+   ISPIN = 2
+    LDAU = .TRUE.
+LDAUTYPE = 2
+   LDAUL = -1 2
+   LDAUU = 0 3.8999999999999999
+   LDAUJ = 0 0
+ LMAXMIX = 4
+  INIWAV = 1
+  ISTART = 0
+  ICHARG = 2
+   LWAVE = .FALSE.
+  LCHARG = .FALSE.
+ ADDGRID = .FALSE.
+  ISMEAR = 1
+   SIGMA = 0.2
+   LREAL = .FALSE.
+  NWRITE = 1
+RWIGS = 0.73 1.17
+
